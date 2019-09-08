@@ -1,0 +1,24 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ htmlWebpackPlugin.options.title }}</title>
+  <meta name="author" content="{{ htmlWebpackPlugin.options.author }}" />
+  <meta name="description" content="{{ htmlWebpackPlugin.options.description }}" />
+  <meta name="keywords" content="{{ htmlWebpackPlugin.options.keywords }}" />
+  {{> ../src/head }}
+</head>
+
+<body>
+  <div class="app-info">
+    <div class="label">
+      <span>
+        {{ htmlWebpackPlugin.options.title }}
+      </span>
+    </div>
+  </div>
+  {{> ../src/app }}
+</body>
+
+</html>

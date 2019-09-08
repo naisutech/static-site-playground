@@ -1,0 +1,10 @@
+# project
+node_modules
+.env
+
+# os
+.DS_Store
+**/.DS_Store
+
+
+
