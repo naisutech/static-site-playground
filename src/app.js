@@ -10,4 +10,4 @@ import './bootstrap'
  * 2. Write all your JS here
  */
 
-console.log('hello')
+console.log('hello world')

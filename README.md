@@ -2,6 +2,8 @@
 
 A webpack-driven static site playground for local development of [codepen-esque](https://codepen.io) experiments.
 
+![naisu projec](./sample.png)
+
 ## Usage
 
 ### Pre-requisites
@@ -14,7 +16,7 @@ A webpack-driven static site playground for local development of [codepen-esque]
 1. Clone the repo
 2. `yarn` or `npm install`
 3. `yarn start`
-4. Default app opens at `localhost:4000` (Hot module and live reloading enabled by default.)
+4. Default app opens at `localhost:4000` (Live reloading enabled by default. HMR enabled by editing webpack config)
 5. See 'Developing in your playground' below
 
 ### Building for production
@@ -25,7 +27,7 @@ A webpack-driven static site playground for local development of [codepen-esque]
 
 ### Developing in your playground
 
-Static Site Playground is designed to be very simple. It's got three main files to care about (found under `src/` folder):
+Static Site Playground is designed to be very simple. There are three main files provided for you to use in your creative coding experiments (found under `src/` folder):
 
 1. `app.hbs`: this is your 'HTML' file. It's inserted into the body element. You can use standard HTML, but if you want to use the power of handlebars templating, feel free to define template partials, or invesigate `bootstrap.js` to see how to use dynamic partials with injected data.
 2. `app.js`: this is your JS file.

@@ -1,23 +1,27 @@
+// lib
+@import '~normalize-scss/sass/normalize';
 // these styles are used for the app name label in the top right corner
 $labelColor: gold; // change the color to whatever you want (https://www.quackit.com/css/css_color_codes.cfm)
-$shouldDisplay: 'block'; // change to 'none' to disable the label
+$shouldDisplay: initial; // change to 'none' to disable the label
 
 .app-info {
   position: fixed;
-  top: 40px;
-  right: -40px;
+  top: 25px;
+  right: 25px;
   transform: rotate(45deg);
   transform-style: preserve-3d;
   margin: 0 auto;
   z-index: 1000;
   display: $shouldDisplay;
+  width: 200px;
+  height: 200px;
 }
 
 .app-info .label {
   height: 22px;
   font-size: 18px;
   background-color: $labelColor;
-  width: 100px;
+  width: 100%;
   text-align: center;
   font-family: sans-serif;
   font-weight: 700;

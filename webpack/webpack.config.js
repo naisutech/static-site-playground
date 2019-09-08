@@ -18,8 +18,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 /**
- * LOADERS
+ * LIBS
  */
+const autoprefixer = require('autoprefixer')
 
 /**
  * CORE CONFIG
@@ -55,6 +56,12 @@ module.exports = {
           'style-loader',
           'css-loader',
           {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [autoprefixer()]
+            }
+          },
+          {
             loader: 'sass-loader',
             options: {
               sourceMap: true
@@ -76,6 +83,8 @@ module.exports = {
   devServer: {
     port: 4000,
     contentBase: './dist',
-    hot: true
+    watchContentBase: true,
+    // hot: true,
+    inline: true
   }
 }
