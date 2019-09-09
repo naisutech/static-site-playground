@@ -72,13 +72,15 @@ module.exports = {
       { test: /\.hbs$/, use: ['handlebars-loader'] },
       {
         test: /\.svg$/,
-        {
-          loader: 'svg-inline-loader',
-          options: {
-            removeSVGTagAttrs: true,
-            removingTags: ['title', 'desc'],
+        use: [
+          {
+            loader: 'svg-inline-loader',
+            options: {
+              removeSVGTagAttrs: true,
+              removingTags: ['title', 'desc']
+            }
           }
-        }
+        ]
       }
     ]
   },
