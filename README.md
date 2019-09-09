@@ -33,7 +33,14 @@ Static Site Playground is designed to be very simple. There are three main files
 2. `app.js`: this is your JS file.
 3. `app.scsss`: this is your styles file. It uses SASS, so you can define partials, use mixins, and all the other powerful tools of the SASS pre-processor.
 
-### other useful files:
+### Assets
+
+- **Images**: put images in `static/assets/images` and import into CSS as `url()`, JS as `require()` or `import ...`, or HTML as `<img src="">` and webpack will take care of copying/inlining you assets for the project
+- **Fonts**: support pending
+- **Videos**: support pending
+- **Custom scripts**: put images in `static/assets/scripts` or `static/assets/scripts/vendor` and import in JS as `require()` or `import ...` or in HTML as `<script src="...">` and webpack (should) take care of bundling for your dev server/build
+
+### Other useful files:
 
 1. `/src/header.hbs`: add extra HTML (`<link>`,`<script>`,`<meta>`) content for the `<head>` of your HTML file
 2. `src/_bootstrap.scss`: core styles used of the app label badge that appears in top right of your app
