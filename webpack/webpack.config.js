@@ -74,7 +74,18 @@ module.exports = {
           }
         ]
       },
-      { test: /\.hbs$/, use: ['handlebars-loader'] }
+      { test: /\.hbs$/, use: ['handlebars-loader'] },
+      {
+        test: /\.svg$/,
+        loader: 'svg-url-loader',
+        options: {
+          // Images larger than 10 KB won’t be inlined
+          limit: 500 * 1024,
+          // Remove quotes around the encoded URL –
+          // they’re rarely useful
+          noquotes: true
+        }
+      }
     ]
   },
   resolve: {
