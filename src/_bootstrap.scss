@@ -1,5 +1,16 @@
 // lib
 @import '~normalize-scss/sass/normalize';
+
+// resets
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 // these styles are used for the app name label in the top right corner
 $labelColor: gold; // change the color to whatever you want (https://www.quackit.com/css/css_color_codes.cfm)
 $shouldDisplay: initial; // change to 'none' to disable the label
