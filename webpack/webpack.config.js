@@ -69,7 +69,17 @@ module.exports = {
           }
         ]
       },
-      { test: /\.hbs$/, use: ['handlebars-loader'] }
+      { test: /\.hbs$/, use: ['handlebars-loader'] },
+      {
+        test: /\.svg$/,
+        {
+          loader: 'svg-inline-loader',
+          options: {
+            removeSVGTagAttrs: true,
+            removingTags: ['title', 'desc'],
+          }
+        }
+      }
     ]
   },
   resolve: {
