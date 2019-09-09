@@ -2,7 +2,7 @@
 
 A webpack-driven static site playground for local development of [codepen-esque](https://codepen.io) experiments.
 
-![naisu projec](./sample.png)
+![naisu project](./sample.png)
 
 ## Usage
 
@@ -54,4 +54,6 @@ I think there is a missing 'local development' solution for rapidly creating cod
 - [x] Simple tech stack: vanilla JS | sass stylesheets | plain HTML
 - [x] Branchable/forkable app template that can be extended / enhanced as you see fit
 - [x] Reliable build task for production environments that can be deployed to surge / netlify / static site hosting
-- [ ] support for serving custom assets: fonts, images, videos, etc.
+- [x] support for serving custom assets: images with optimization
+- [ ] support for serving custom assets: fonts
+- [ ] support for serving custom assets: videos

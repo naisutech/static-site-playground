@@ -1,0 +1,32 @@
+/*
+* Utlility classes for commons styles
+*/
+
+/*
+* LAYOUT
+*/
+
+.flex {
+  display: flex;
+}
+
+.flex-h-center {
+  justify-content: center;
+}
+
+.flex-v-center {
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+/*
+* CONTENT
+*/
+.text-nowrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

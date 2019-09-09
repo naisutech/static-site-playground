@@ -75,16 +75,30 @@ module.exports = {
         ]
       },
       { test: /\.hbs$/, use: ['handlebars-loader'] },
+      // https://iamakulov.com/notes/optimize-images-webpack/
       {
         test: /\.svg$/,
         loader: 'svg-url-loader',
         options: {
-          // Images larger than 10 KB won’t be inlined
-          limit: 500 * 1024,
-          // Remove quotes around the encoded URL –
-          // they’re rarely useful
+          // Images larger than 500 KB won’t be inlined
+          // limit: 500 * 1024,
           noquotes: true
         }
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/,
+        loader: 'url-loader',
+        options: {
+          // Images larger than 10 KB won’t be inlined
+          // limit: 10 * 1024
+        }
+      },
+      {
+        test: /\.(jpg|png|gif|svg)$/,
+        loader: 'image-webpack-loader',
+        // Specify enforce: 'pre' to apply the loader
+        // before url-loader/svg-url-loader
+        enforce: 'pre'
       }
     ]
   },
@@ -97,6 +111,7 @@ module.exports = {
   target: 'web',
   devtool: 'inline-source-map',
   devServer: {
+    host: '0.0.0.0',
     port: 4000,
     contentBase: './dist',
     watchContentBase: true,
