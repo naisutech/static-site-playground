@@ -46,7 +46,7 @@ Main asset folder: `/static/assets`
 
 1. `/src/header.hbs`: add extra HTML (`<link>`,`<script>`,`<meta>`) content for the `<head>` of your HTML file
 2. `src/_bootstrap.scss`: core styles used of the app label badge that appears in top right of your app
-3. `./.env.sample`: ENV values in the sample are injected and used in the raw HTML as meta tags, and as the app label that appears in the top right. If you provide an `.env` file with ovverides, they'll appear in your app too.
+3. `./.env.sample`: ENV values in the sample are injected and used in the raw HTML as meta tags, and as the app label that appears in the top right. If you provide an `.env` file with overrides, they'll appear in your app too.
 4. `./bootstrap.js`: Used to import supporting assets (app.scss, etc) for webpack build
 
 ## Project details
