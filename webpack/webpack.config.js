@@ -44,7 +44,7 @@ module.exports = {
       url: env.APP_URL
     }),
     new MiniCssExtractPlugin({
-      filename: isDevelopment ? '[name].css' : '[name].[hash].css'
+      filename: 'app.css'
     })
   ],
   module: {
@@ -53,7 +53,12 @@ module.exports = {
         test: /\.s(a|c)ss$/,
         exclude: /\.module.(s(a|c)ss)$/,
         use: [
-          'style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: true
+            }
+          },
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -69,19 +74,7 @@ module.exports = {
           }
         ]
       },
-      { test: /\.hbs$/, use: ['handlebars-loader'] },
-      {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: 'svg-inline-loader',
-            options: {
-              removeSVGTagAttrs: true,
-              removingTags: ['title', 'desc']
-            }
-          }
-        ]
-      }
+      { test: /\.hbs$/, use: ['handlebars-loader'] }
     ]
   },
   resolve: {
