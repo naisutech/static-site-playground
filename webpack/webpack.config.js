@@ -81,7 +81,7 @@ module.exports = {
         loader: 'svg-url-loader',
         options: {
           // Images larger than 500 KB won’t be inlined
-          // limit: 500 * 1024,
+          limit: 500 * 1024,
           noquotes: true
         }
       },
@@ -90,7 +90,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           // Images larger than 10 KB won’t be inlined
-          // limit: 10 * 1024
+          limit: 10 * 1024
         }
       },
       {
