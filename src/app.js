@@ -6,6 +6,7 @@ import './bootstrap'
 
 /**
  * Prebuilt REACT
+ * Uncomment the import below to start working with React.js!
  */
 // import './react'
 

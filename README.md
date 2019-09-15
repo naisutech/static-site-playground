@@ -2,6 +2,11 @@
 
 A webpack-driven static site playground for local development of [codepen-esque](https://codepen.io) experiments.
 
+Supports:
+
+- [x] Vanilla JS
+- [x] React.js (instructions for enabling below)
+
 ![naisu project](./sample.png)
 
 ## Usage
@@ -31,6 +36,9 @@ Static Site Playground is designed to be very simple. There are three main files
 
 1. `app.hbs`: this is your 'HTML' file. It's inserted into the body element. You can use standard HTML, but if you want to use the power of handlebars templating, feel free to define template partials, or invesigate `bootstrap.js` to see how to use dynamic partials with injected data.
 2. `app.js`: this is your JS file.
+
+- To enable React.js support, uncomment the `import` line for react in this file
+
 3. `app.scsss`: this is your styles file. It uses SASS, so you can define partials, use mixins, and all the other powerful tools of the SASS pre-processor.
 
 ### Assets
@@ -66,3 +74,6 @@ I think there is a missing 'local development' solution for rapidly creating cod
 - [x] support for serving custom assets: images with optimization
 - [ ] support for serving custom assets: fonts
 - [ ] support for serving custom assets: videos
+- [x] support for modern JS frameworks: React.js
+- [ ] support for modern JS frameworks: Vue.js
+- [ ] support for modern JS frameworks: Angular
