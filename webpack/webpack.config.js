@@ -20,6 +20,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 /**
  * LIBS
  */
+const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 
 /**
@@ -45,10 +46,22 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'app.css'
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: []
+          }
+        }
+      },
       {
         test: /\.s(a|c)ss$/,
         exclude: /\.module.(s(a|c)ss)$/,
@@ -115,7 +128,10 @@ module.exports = {
     port: 4000,
     contentBase: './dist',
     watchContentBase: true,
-    // hot: true,
-    inline: true
+    hot: true,
+    liveReload: true,
+    inline: true,
+    open: true,
+    writeToDisk: true
   }
 }

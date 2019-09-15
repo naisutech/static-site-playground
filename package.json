@@ -8,11 +8,16 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "dotenv": "^8.1.0",
     "eslint": "^6.3.0",
+    "eslint-plugin-react": "^7.14.3",
     "handlebars": "^4.2.0",
     "handlebars-loader": "^1.7.1",
     "html-webpack-plugin": "^3.2.0",
@@ -22,6 +27,9 @@
     "node-sass": "^4.12.0",
     "normalize-scss": "^7.0.1",
     "postcss-loader": "^3.0.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-swipeable-views": "^0.13.3",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "svg-inline-loader": "^0.8.0",
@@ -33,7 +41,7 @@
   },
   "scripts": {
     "build": "webpack --config ./webpack/webpack.config.js",
-    "start": "webpack-dev-server --open --config ./webpack/webpack.config.js"
+    "start": "webpack-dev-server --config ./webpack/webpack.config.js"
   },
   "browserslist": [
     "> 1%",
